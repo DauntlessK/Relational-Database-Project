@@ -1,0 +1,49 @@
+Objectives===========================
+
+The project is designed to give you hands-on experience in:
+
+collecting and analyzing data and functional requirements for a real-world enterprise,
+
+applying the ER model in a conceptual database design,
+
+creating a relational database for an enterprise,
+
+designing useful queries for a database application, and
+
+using SQL and other features of a real DBMS.
+
+The chosen DBMS for this project is Oracle (optional).
+
+Project Tasks =====================================
+ 
+Each group is expected to complete the following tasks:
+
+Choose an enterprise you are familiar with.
+
+Describe the database requirements for the enterprise in informal terms.
+
+Specify the database requirements using an ER diagram.
+
+Convert your ER diagram into a relational database schema.
+
+Create the relations in the chosen RDBMS and load sample data into the database.
+
+Design and run at least 10 useful SQL queries/updates on your database.
+
+Project Report ====================================
+
+Your report should include (but is not limited to) the following:
+
+a description of the application background,
+
+a specification of the database requirements,
+
+the ER diagram,
+
+the relational database schema,
+
+the sample database (instance),
+
+the SQL statements, and
+
+the query/update results.

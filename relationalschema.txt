@@ -1,0 +1,78 @@
+CUSTOMER=======================
+
+CustomerID (PK)
+Name
+Address
+Email
+Phone
+
+SALESPERSON====================
+
+SalespersonID (PK)
+Name
+Email
+
+JOB============================
+
+JobID (PK)
+CustomerID (FK → CUSTOMER)
+SalespersonID (FK → SALESPERSON)
+JobDate
+Status
+
+ITEM===========================
+
+ItemID (PK)
+JobID (FK → JOB)
+Type
+PressID (FK → PRESS)
+PaperID (FK → PAPER)
+Size
+Quantity
+PageCount
+SimplexDuplex
+ColorBW
+
+FINISHING_OPTION================
+
+OptionID (PK)
+OptionName
+
+ITEM_FINISHING (junction table)==
+
+ItemID (FK → ITEM)
+OptionID (FK → FINISHING_OPTION)
+(PK = ItemID + OptionID)
+
+PRESS===========================
+
+PressID (PK)
+Name
+MaxSheetSize
+StockCapabilities
+MaxSpeed
+ColorBW
+InlineOps
+
+PRESS_CAPABILITY=================
+
+CapabilityID (PK)
+PressID (FK → PRESS)
+CapabilityName
+
+PAPER============================
+
+PaperID (PK)
+Weight
+Brand
+Type
+Color
+Finish
+
+INVOICE==========================
+
+InvoiceID (PK)\
+JobID (FK → JOB)
+InvoiceDate
+Amount
+PaidStatus
