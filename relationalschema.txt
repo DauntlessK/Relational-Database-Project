@@ -5,6 +5,7 @@ Name
 Address
 Email
 Phone
+SalespersonID (FK → SALESPERSON)
 
 SALESPERSON====================
 
@@ -18,7 +19,13 @@ JobID (PK)
 CustomerID (FK → CUSTOMER)
 SalespersonID (FK → SALESPERSON)
 JobDate
-Status
+Status (FK → STATUS)
+
+STATUS=========================
+
+StatusID (PK)
+Name
+Description
 
 ITEM===========================
 
@@ -27,7 +34,8 @@ JobID (FK → JOB)
 Type
 PressID (FK → PRESS)
 PaperID (FK → PAPER)
-Size
+Width
+Height
 Quantity
 PageCount
 SimplexDuplex
@@ -37,42 +45,39 @@ FINISHING_OPTION================
 
 OptionID (PK)
 OptionName
-
-ITEM_FINISHING (junction table)==
-
-ItemID (FK → ITEM)
-OptionID (FK → FINISHING_OPTION)
-(PK = ItemID + OptionID)
+PressID (FK → PRESS)
 
 PRESS===========================
 
 PressID (PK)
 Name
-MaxSheetSize
-StockCapabilities
+MaxSheetSizeWidth
+MaxSheetSizeHeight
+MaxStockWeight
 MaxSpeed
 ColorBW
 InlineOps
-
-PRESS_CAPABILITY=================
-
-CapabilityID (PK)
-PressID (FK → PRESS)
-CapabilityName
 
 PAPER============================
 
 PaperID (PK)
 Weight
 Brand
-Type
+Type (FK → STOCK_TYPE)
 Color
 Finish
 
+STOCK_TYPE=======================
+
+StockTypeID (PK)
+Name
+Description
+
 INVOICE==========================
 
-InvoiceID (PK)\
+InvoiceID (PK)
 JobID (FK → JOB)
+CustomerID (FK → CUSTOMER)
 InvoiceDate
 Amount
 PaidStatus
