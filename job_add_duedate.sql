@@ -1,0 +1,2 @@
+ALTER TABLE JOB
+ADD DueDate DATE AFTER JobDate;

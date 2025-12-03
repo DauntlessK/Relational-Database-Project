@@ -19,7 +19,7 @@ JobID (PK)
 CustomerID (FK → CUSTOMER)
 SalespersonID (FK → SALESPERSON)
 JobDate
-Status (FK → STATUS)
+StatusID (FK → STATUS)
 
 STATUS=========================
 
@@ -63,7 +63,7 @@ PAPER============================
 PaperID (PK)
 Weight
 Brand
-Type (FK → STOCK_TYPE)
+STOCK_TYPE (FK → STOCK_TYPE)
 Color
 Finish
 
@@ -77,7 +77,10 @@ INVOICE==========================
 
 InvoiceID (PK)
 JobID (FK → JOB)
-CustomerID (FK → CUSTOMER)
 InvoiceDate
 Amount
 PaidStatus
+
+PRINT_ITEM_TYPE=======================
+PrintTypeID (PK)
+Name
